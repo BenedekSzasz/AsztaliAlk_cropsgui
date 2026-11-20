@@ -14,9 +14,11 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    public static Stage currentStage;
 
     @Override
     public void start(Stage stage) throws IOException {
+        currentStage = stage;
         scene = new Scene(loadFXML("mainScene"), 640, 480);
         stage.setScene(scene);
         stage.show();

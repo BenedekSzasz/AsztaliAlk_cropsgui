@@ -1,21 +1,22 @@
+
 package com.example;
 
 public class Crop {
     int id;
     String name;
-    int forage;
+    boolean forage;
     int quantity;
 
     public Crop() {
     }
 
-    public Crop(String name, int forage, int quantity) {
+    public Crop(String name, boolean forage, int quantity) {
         this.name = name;
         this.forage = forage;
         this.quantity = quantity;
     }
 
-    public Crop(int id, String name, int forage, int quantity) {
+    public Crop(int id, String name, boolean forage, int quantity) {
         this.id = id;
         this.name = name;
         this.forage = forage;
@@ -24,7 +25,8 @@ public class Crop {
 
     @Override
     public String toString() {
-        return "Crop [id=" + id + ", name=" + name + ", forage=" + forage + ", quantity=" + quantity + "]";
+        return "Crop [id=" + id + ", name=" + name +
+               ", forage=" + forage + ", quantity=" + quantity + "]";
     }
 
     public int getId() {
@@ -43,11 +45,11 @@ public class Crop {
         this.name = name;
     }
 
-    public int getForage() {
+    public boolean isForage() {
         return forage;
     }
 
-    public void setForage(int forage) {
+    public void setForage(boolean forage) {
         this.forage = forage;
     }
 
@@ -58,6 +60,4 @@ public class Crop {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-
-    
 }
